@@ -1,0 +1,108 @@
+/* Universal box-sizing to include padding and border in element width and height calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  /* Limit maximum width and center content horizontally */
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navigation bar styles */
+nav {
+  /* Set background color and text color */
+  background-color: #333;
+  color: #fff;
+  
+  /* Increase font size and weight */
+  font-size: 18px;
+  font-weight: bold;
+  
+  /* Padding around the navigation */
+  padding: 10px;
+}
+
+/* Navigation list styles */
+nav ul {
+  /* Remove list bullets and reset margin and padding */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation list item styles */
+nav li {
+  /* Display list items inline and add right margin between them */
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Navigation link styles */
+nav a {
+  /* Set link color to white and remove text decoration */
+  color: #fff;
+  text-decoration: none;
+  
+  /* Add padding around links */
+  padding: 10px;
+}
+
+/* Navigation link hover styles */
+nav a:hover {
+  /* Invert background and text color on hover */
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hero section styles */
+.hero-section {
+  /* Set relative positioning and adjust height */
+  position: relative;
+  height: 80vh; /* Adjust the height as desired */
+  
+  /* Allow content overflow if necessary */
+  overflow: hidden;
+}
+
+/* Hero image styles */
+.hero-image {
+  /* Set width and height to fit the full section */
+  width: 100%;
+  height: 100%;
+  
+  /* Maintain aspect ratio of image */
+  object-fit: cover;
+}
+
+/* Hero overlay styles */
+.overlay {
+  /* Set absolute positioning and center text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Set text color and alignment */
+  color: white;
+  text-align: center;
+  
+  /* Add semi-transparent background and padding */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  
+  /* Add border radius for rounded corners */
+  border-radius: 10px;
+}
+
+/* Footer styles */
+.footer {
+  /* Set background color and text alignment */
+  background-color: rgb(208, 215, 101);
+  text-align: center;
+  
+  /* Set text color and padding */
+  color: rgb(1, 6, 11);
+  padding: 15px;
+}
