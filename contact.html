@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the external CSS file for styling -->
+
+    <style>
+        /* Styles for the contact form */
+        form {
+            margin: auto;
+            width: 50%;  /* Set form width to 50% and center it */
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgb(197, 119, 191);  /* Background color */
+        }
+        
+        /* Styles for form labels */
+        label {
+            display: inline-block;
+            width: 100px;  /* Label width */
+            font-weight: bold;
+        }
+        
+        /* Styles for form input fields and textarea */
+        input[type="text"],
+        input[type="gmail"],
+        textarea {
+            width: 100%;  /* Full width */
+            padding: 5px; /* Padding inside the fields */
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        /* Styles for the submit button */
+        input[type="submit"] {
+            background-color: #de5f3c;  /* Button background color */
+            color: white;  /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Change background color on hover */
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+
+    <!-- JavaScript function for form validation -->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("gmail").value;
+            var subject = document.getElementById("topic").value;
+            var message = document.getElementById("message").value;
+
+            // Validate name
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            // Validate email format using regex
+            var GmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!GmailRegex.test(email)) {
+                alert("Please enter a valid Gmail address");
+                return false;
+            }
+
+            // Validate subject
+            if (topic == "") {
+                alert("Topic must be filled out");
+                return false;
+            }
+
+            // Validate message
+            if (message == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+
+            // Return true if all fields are valid
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header section with navigation menu -->
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Offers.html">Offers</a></li>
+                <li><a href="gallery.html">Sightseeing spot</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <br>
+
+    <!-- Contact form section -->
+    <form id="contact-form" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <!-- Input field for name -->
+        <input type="text" id="name" name="name" required>
+        <br>
+        
+        <label for="gmail">Gmail:</label>
+        <!-- Input field for Gmail -->
+        <input type="gmail" id="gmail" name="gmail" required>
+        <br>
+        
+        <label for="topic">Topic:</label>
+        <!-- Input field for topic -->
+        <input type="text" id="topic" name="topic" required>
+        <br>
+        
+        <label for="message">Message:</label>
+        <!-- Textarea for message -->
+        <textarea name="message" id="message" required></textarea>
+        <br>
+        
+        <input type="submit" value="Send">
+        <!-- Submit button -->
+    </form>
+
+    <br>
+
+    <!-- Footer section with logo, contact information, and copyright notice -->
+    <div class="footer">
+        <img src="logo.png" alt="Logo" align="left" width="100px" height="100px">
+        <!-- Display the company logo in the footer, aligned to the left -->
+        
+        <h1>The Soaltee Hotel & Resorts Kathmandu</h1>
+        <!-- Company name in a larger heading -->
+        
+        <h2>Tahachal 44600 Kathmandu, Nepal</h2>
+        <h3>+977 1 4273999</h3>
+        <h4>© 2024 The Soaltee Hotel & Resorts. All Rights Reserved</h4>
+    </div>
+
+</body>
+
+</html>
