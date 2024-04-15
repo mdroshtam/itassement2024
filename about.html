@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to external CSS file for styling -->
+    
+    <style>
+        /* Inline CSS style block */
+        
+        p {
+            /* Float paragraphs to the left, take up 50% width */
+            float: left;
+            width: 50%;
+            text-align: center;
+        }
+        
+        /* Container for map */
+        .map-container {
+            margin-top: 20px; /* Add margin to separate from other elements */
+            width: 100%; /* Full width */
+            height: 400px; /* Fixed height */
+            position: relative; /* Allow absolute positioning inside */
+            overflow: hidden; /* Hide overflowed content */
+        }
+        
+        /* Style for iframe inside map container */
+        .map-container iframe {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: 0; /* No border around iframe */
+            position: absolute; /* Positioning iframe absolutely */
+            top: 0; /* Top of the container */
+            left: 0; /* Left side of the container */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section with navigation menu -->
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Offers.html">Offers</a></li>
+                <li><a href="gallery.html">Sightseeing spot</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main content area with header -->
+    <h1>About</h1>
+    <p>Greetings and welcome to The Soaltee Kathmandu, a pioneer in the Nepali hospitality sector since its establishment in 1966. Situated strategically in the lively center of the capital, our renowned establishment has continuously upheld the benchmark for exceptional service and enduring sophistication. With a rich history spanning more than fifty years, our thoughtfully crafted facilities, encompassing luxurious lodging options and refined dining experiences, embody a harmonious blend of traditional charm and contemporary allure</p>
+    <img src="second.jpg" width="500px" style="float: right; width: 50%;">
+    <!-- Right-aligned image with specified width -->
+    
+    <h3>Location</h3>
+    <!-- Map container with iframe for Google Maps embed -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14131.03810464283!2d85.3239504!3d27.693826350000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b163529399%3A0x522e7f4734ac0fb9!2sNorvic%20International%20Hospital!5e0!3m2!1sen!2snp!4v1681278230128!5m2!1sen!2snp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <!-- Footer section with logo and contact information -->
+    <div class="footer">
+        <img src="logo.png" alt="Logo" align="left" width="100px" height="100px">
+        <h1>The Soaltee hotels & Resorts Kathmandu</h1>
+        <h2>Tahachal 44600 Kathmandu, Nepal</h2>
+        <h3>+977 1 4273999</h3>
+        <h4>© 2024 The Soaltee Hotel & Resorts. All Rights Reserved</h4>
+    </div>
+</body>
+
+</html>
